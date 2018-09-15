@@ -10,6 +10,7 @@
         "backpack/base": "^0.9.8",
         "backpack/crud": "^3.4",
         "backpack/langfilemanager": "^1.0",
+        "backpack/pagemanager": "^1.1",
         "backpack/settings": "^2.1",
         "barryvdh/laravel-elfinder": "^0.4.1",
         "fideloper/proxy": "^4.0",

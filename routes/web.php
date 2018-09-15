@@ -12,5 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/home');
 });
+
+// Admin group
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
+    CRUD::resource('customer', 'Admin\CustomerCrudController');
+});
+
+// Page routes
+Route::get('{page}/{subs?}', ['uses' => 'PageController@index'])
+    ->where(['page' => '^((?!admin).)*$', 'subs' => '.*']);
